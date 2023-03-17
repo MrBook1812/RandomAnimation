@@ -70,7 +70,6 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YA9-DW-5XP" customClass="SpringButton" customModule="SpringAnimation">
@@ -86,7 +85,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="springButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tYL-PO-Fcd"/>
+                                    <action selector="runButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DnM-0X-rgU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,7 +107,6 @@
                         <outlet property="forceLabel" destination="if1-kP-Wtc" id="WEN-Zi-iIc"/>
                         <outlet property="presetLabel" destination="ksd-7l-9gu" id="5P8-La-NgJ"/>
                         <outlet property="springAnimationView" destination="ANc-9j-wat" id="Iaw-uH-GGC"/>
-                        <outlet property="springButton" destination="YA9-DW-5XP" id="cr0-oa-kaq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
