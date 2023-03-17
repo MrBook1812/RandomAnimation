@@ -15,6 +15,7 @@
 		CFC9289629C481DB0007BB0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC9289429C481DB0007BB0E /* LaunchScreen.storyboard */; };
 		CFC9289F29C482FD0007BB0E /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = CFC9289E29C482FD0007BB0E /* SpringAnimation */; };
 		CFC928A129C488320007BB0E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC928A029C488320007BB0E /* Model.swift */; };
+		CFC928A329C4B7730007BB0E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC928A229C4B7730007BB0E /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		CFC9289529C481DB0007BB0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFC9289729C481DB0007BB0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC928A029C488320007BB0E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CFC928A229C4B7730007BB0E /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,16 +62,57 @@
 		CFC9288829C481D90007BB0E /* RandomAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				CFC9288929C481D90007BB0E /* AppDelegate.swift */,
-				CFC9288B29C481D90007BB0E /* SceneDelegate.swift */,
-				CFC9288D29C481D90007BB0E /* ViewController.swift */,
-				CFC928A029C488320007BB0E /* Model.swift */,
-				CFC9288F29C481D90007BB0E /* Main.storyboard */,
-				CFC9289229C481DB0007BB0E /* Assets.xcassets */,
-				CFC9289429C481DB0007BB0E /* LaunchScreen.storyboard */,
-				CFC9289729C481DB0007BB0E /* Info.plist */,
+				CFC928A429C4B7AD0007BB0E /* Storyboards */,
+				CFC928A529C4B7B70007BB0E /* ViewControllers */,
+				CFC928A829C4B8840007BB0E /* Models */,
+				CFC928A629C4B8280007BB0E /* Services */,
+				CFC928A729C4B8400007BB0E /* App */,
 			);
 			path = RandomAnimation;
+			sourceTree = "<group>";
+		};
+		CFC928A429C4B7AD0007BB0E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CFC9288F29C481D90007BB0E /* Main.storyboard */,
+				CFC9289429C481DB0007BB0E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CFC928A529C4B7B70007BB0E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFC9289229C481DB0007BB0E /* Assets.xcassets */,
+				CFC9288D29C481D90007BB0E /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CFC928A629C4B8280007BB0E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CFC928A229C4B7730007BB0E /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CFC928A729C4B8400007BB0E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CFC9288929C481D90007BB0E /* AppDelegate.swift */,
+				CFC9288B29C481D90007BB0E /* SceneDelegate.swift */,
+				CFC9289729C481DB0007BB0E /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CFC928A829C4B8840007BB0E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFC928A029C488320007BB0E /* Model.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +195,7 @@
 				CFC9288E29C481D90007BB0E /* ViewController.swift in Sources */,
 				CFC9288A29C481D90007BB0E /* AppDelegate.swift in Sources */,
 				CFC9288C29C481D90007BB0E /* SceneDelegate.swift in Sources */,
+				CFC928A329C4B7730007BB0E /* DataStore.swift in Sources */,
 				CFC928A129C488320007BB0E /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TN6W662TZ9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomAnimation/Info.plist;
+				INFOPLIST_FILE = RandomAnimation/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,7 +376,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TN6W662TZ9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomAnimation/Info.plist;
+				INFOPLIST_FILE = RandomAnimation/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
