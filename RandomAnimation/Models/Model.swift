@@ -8,11 +8,11 @@ import Foundation
 import SpringAnimation
 
 struct AnimationCollection {
-    var preset: String
-    var curve: String
-    var force: Double
-    var duration: Double
-    var delay: Double
+    let preset: String
+    let curve: String
+    let force: Double
+    let duration: Double
+    let delay: Double
     
     static func getAnimation() -> AnimationCollection {
         let collection =  AnimationCollection(

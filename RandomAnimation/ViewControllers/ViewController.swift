@@ -18,7 +18,6 @@ final class ViewController: UIViewController {
     @IBOutlet var durationLabel: UILabel!
     @IBOutlet var delayLabel: UILabel!
     
-    
     private var animationCollection: AnimationCollection {
         AnimationCollection.getAnimation()
     }
@@ -31,23 +30,25 @@ final class ViewController: UIViewController {
     
     @IBAction func runButtonTapped(_ sender: SpringButton) {
         springAnimationView.animate()
-        sender.setTitle("Run \(animationCollection.preset)", for: .normal)
+        sender.setTitle("Run \(springAnimationView.animation)", for: .normal)
         setUpLabels()
     }
 }
 // MARK: extension ViewController
 extension ViewController {
     private func setUpLabels() {
-        presetLabel.text = "Preset: \(animationCollection.preset)"
-        curveLabel.text = "Curve: \(animationCollection.curve)"
-        forceLabel.text = "Force: \(animationCollection.force)"
-        durationLabel.text = "Duration: \(animationCollection.duration)"
-        delayLabel.text = "Delay: \(animationCollection.delay)"
+        var collection = animationCollection
         
-        springAnimationView.animation = animationCollection.preset
-        springAnimationView.curve = animationCollection.curve
-        springAnimationView.force = animationCollection.force
-        springAnimationView.duration = animationCollection.duration
-        springAnimationView.delay = animationCollection.delay
+        presetLabel.text = "Preset: \(collection.preset)"
+        curveLabel.text = "Curve: \(collection.curve)"
+        forceLabel.text = "Force: \(collection.force)"
+        durationLabel.text = "Duration: \(collection.duration)"
+        delayLabel.text = "Delay: \(collection.delay)"
+        
+        springAnimationView.animation = collection.preset
+        springAnimationView.curve = collection.curve
+        springAnimationView.force = collection.force
+        springAnimationView.duration = collection.duration
+        springAnimationView.delay = collection.delay
     }
 }
