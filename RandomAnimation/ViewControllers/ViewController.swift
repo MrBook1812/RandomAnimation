@@ -37,7 +37,7 @@ final class ViewController: UIViewController {
 // MARK: extension ViewController
 extension ViewController {
     private func setUpLabels() {
-        var collection = animationCollection
+        let collection = animationCollection
         
         presetLabel.text = "Preset: \(collection.preset)"
         curveLabel.text = "Curve: \(collection.curve)"
