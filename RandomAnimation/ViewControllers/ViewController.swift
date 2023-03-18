@@ -18,33 +18,33 @@ final class ViewController: UIViewController {
     @IBOutlet var durationLabel: UILabel!
     @IBOutlet var delayLabel: UILabel!
     
-    private var animationCollection: AnimationCollection {
-        AnimationCollection.getAnimation()
-    }
+    private var animationCollection = AnimationCollection.getAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpLabels()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func runButtonTapped(_ sender: SpringButton) {
+        setAnimation()
         springAnimationView.animate()
-        sender.setTitle("Run \(springAnimationView.animation)", for: .normal)
         setUpLabels()
+        animationCollection = AnimationCollection.getAnimation()
+        sender.setTitle("Run \(animationCollection.preset)", for: .normal)
     }
 }
 // MARK: extension ViewController
 extension ViewController {
     private func setUpLabels() {
         let collection = animationCollection
-        
         presetLabel.text = "Preset: \(collection.preset)"
         curveLabel.text = "Curve: \(collection.curve)"
         forceLabel.text = "Force: \(collection.force)"
         durationLabel.text = "Duration: \(collection.duration)"
         delayLabel.text = "Delay: \(collection.delay)"
-        
+    }
+    private func setAnimation() {
+        let collection = animationCollection
         springAnimationView.animation = collection.preset
         springAnimationView.curve = collection.curve
         springAnimationView.force = collection.force
